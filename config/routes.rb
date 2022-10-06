@@ -3,4 +3,10 @@ Rails.application.routes.draw do
   get '/songs', to: 'songs#index'
   get '/songs/:id', to: 'songs#show'
   get '/artists/:artist_id/songs', to: 'artists_songs#index'
+  get '/artists', to: 'artists#index'
+  get '/artists/new', to: 'artists#new'
+  post '/artists/', to: 'artists#create'
+  get '/artists/:artist_id/edit', to: 'artists#edit'
+  patch '/artists/:artist_id', to: 'artists#update'
+  get '/artists/:artist_id/delete', to: 'artists#destroy'
 end
