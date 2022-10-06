@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'the Artist creation' do 
-  xit 'links to the new page from the artist index' do 
+  it 'links to the new page from the artist index' do 
     visit '/artists'
 
     click_link('New Artist')
