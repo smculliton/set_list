@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   post '/artists/', to: 'artists#create'
   get '/artists/:artist_id/edit', to: 'artists#edit'
   patch '/artists/:artist_id', to: 'artists#update'
+  get '/artists/:artist_id/delete', to: 'artists#destroy'
 end

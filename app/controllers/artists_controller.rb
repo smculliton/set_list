@@ -4,7 +4,6 @@ class ArtistsController < ApplicationController
   end
 
   def new 
-
   end
 
   def create
@@ -20,6 +19,12 @@ class ArtistsController < ApplicationController
   def update 
     artist = Artist.find(params[:artist_id])
     artist.update(artist_params)
+    redirect_to '/artists'
+  end
+
+  def destroy
+    artist = Artist.find(params[:artist_id])
+    artist.destroy
     redirect_to '/artists'
   end
 
