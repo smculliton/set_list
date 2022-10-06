@@ -13,6 +13,17 @@ class ArtistsController < ApplicationController
     redirect_to "/artists/"
   end
 
+  def edit
+    @artist = Artist.find(params[:artist_id])
+  end
+
+  def update 
+    artist = Artist.find(params[:artist_id])
+    artist.update(artist_params)
+    redirect_to '/artists'
+  end
+
+private
   def artist_params
     params.permit(:name)
   end
